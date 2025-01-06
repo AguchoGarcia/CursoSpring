@@ -41,7 +41,6 @@ public class UserController {
 
         return Arrays.asList(
             new User("Agucho", "Garcia"),
-            new User("Azul", "Ovejero", "Azul@correo.com"),
             new User("Delfina", "Otero"),
             new User("Felipe", "Otero", "Felipe@correo.com"));
     }
