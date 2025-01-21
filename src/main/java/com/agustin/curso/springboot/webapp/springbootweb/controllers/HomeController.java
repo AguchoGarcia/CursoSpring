@@ -10,8 +10,8 @@ public class HomeController {
     @GetMapping({"", "/", "/home"})
     public String home() {
 
-        return "redirect:/details";
-        //return "forward:/details";
+        return "redirect:/details"; //redirect redigire hacia la nueva url solicitada reiniciando el request
+        //return "forward:/details"; //hace un switch dentro del mismo request, este se mantiene dentro de la misma peticion http
     }
     
 }

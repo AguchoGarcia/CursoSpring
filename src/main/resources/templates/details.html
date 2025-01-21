@@ -11,10 +11,16 @@
     <h1 th:text="${title}"></h1>
     <ul>
         <li th:text="${user.name}"></li>
-        <li th:text="${user.lastname}"></li>
+        <li th:text="${user.lastname}"></li> <!-- ${} es para los objetos -->
         <li th:if="${user.email}" th:text="${user.email}"></li> <!-- th:if="${}" oculta un campo cuando este es null -->
         <li th:if="${user.email == null}" th:text="${'No posee Email'}"></li> <!-- th:if="${ == null}" muestra un mensaje cuando un campo es null -->
     </ul>
+<a th:href="@{/list}">Ver Listado</a><br> <!-- @{} es para las rutas url -->
+<a th:href="@{/api/params/foo(message='Hola como estas?')}">Ver Mensaje</a><br>
+<a th:href="@{/api/params/foo?message=BOOOOOOOOOOCA}">Ver Mensaje 2</a><br>
+<a th:href="@{/api/params/bar(text='Hola como estas?', code=060422)}">Ver Bar Mix 2 Param</a><br>
+<a th:href="@{'/api/var/baz/' + ${title}}">Ver Var Path Variable</a><br>
+<a th:href="@{'/api/var/baz/' + 'Hola, que tal como estas?'}">Ver Var Path Variable 2</a><br>
 </body>
 
 </html>
